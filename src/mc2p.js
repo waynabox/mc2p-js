@@ -107,6 +107,7 @@
       if (this.gatewaysList[index].code === gatewayCode) {
         var gateway = this.gatewaysList[index];
         if (gateway.form === 'card') {
+          iFrame.style.display = 'none';
           cardDiv.style.visibility = 'visible';
         } else if (gateway.form === 'html') {
           if (this.options.notRedirectHtml) {
@@ -116,6 +117,7 @@
             if (iFrame && (!(gateway.code in this.options.iFrameGateways) || this.options.iFrameGateways[gateway.code])) {
               iFrame.setAttribute('src', redirectUrl);
               iFrame.style.visibility = 'visible';
+              iFrame.style.display = 'block';
             } else {
               document.location = redirectUrl;
             }
@@ -125,6 +127,7 @@
             var divvyUrl = this.DIVVY_URL + '/iframe';
             iFrame.setAttribute('src', divvyUrl);
             iFrame.style.visibility = 'visible';
+            iFrame.style.display = 'block';
           } else {
             document.location = this.DIVVY_URL;
           }

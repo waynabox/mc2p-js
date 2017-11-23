@@ -1,5 +1,9 @@
 # MyChoice2Pay JS
 
+# About this fork
+
+Waynabox has fork this repo in order to adapt the code to custom Waynabox needs. The changes are:
+- Display none iframe when card getaway is selected
 
 # Overview
 
